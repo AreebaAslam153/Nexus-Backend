@@ -255,7 +255,7 @@ BS Information Technology
 
 University of Education, Lahore (Multan Campus)
 
-GitHub: *(Add your GitHub profile link here)*
+GitHub: *https://github.com/AreebaAslam153*
 
 ---
 
