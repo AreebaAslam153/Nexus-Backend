@@ -1,23 +1,29 @@
-# Nexus - Investor & Entrepreneur Collaboration Platform
+# 🚀 Nexus - Investor & Entrepreneur Collaboration Platform
 
-A RESTful backend API built using **Node.js**, **Express.js**, and **MongoDB Atlas** for connecting entrepreneurs with investors. The platform allows users to register, manage startup profiles, schedule meetings, exchange messages, upload documents, receive notifications, and track investments.
+A RESTful Backend API built with **Node.js**, **Express.js**, and **MongoDB Atlas** that connects entrepreneurs with investors. The platform enables users to register, manage startup profiles, schedule meetings, exchange messages, upload documents, receive notifications, and manage investment requests.
 
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-### Authentication
+The Nexus platform provides a secure backend system for connecting startups and investors. It supports authentication, startup management, investor management, meetings, messaging, notifications, investment tracking, and dashboard analytics using RESTful APIs.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
 - User Registration
 - User Login
 - JWT Authentication
-- Password Hashing using bcryptjs
+- Password Encryption using bcryptjs
 
-### User Management
+### 👤 User Management
 - View User Profile
 - Update User Profile
 - Role-Based Authorization (Entrepreneur / Investor)
 
-### Startup Management
+### 🚀 Startup Management
 - Create Startup
 - View All Startups
 - View Startup by ID
@@ -25,39 +31,38 @@ A RESTful backend API built using **Node.js**, **Express.js**, and **MongoDB Atl
 - Delete Startup
 - Search & Filter Startups
 
-### Investor Management
+### 💰 Investor Management
 - Create Investor Profile
 - View Investors
-- Update Investor
-- Delete Investor
+- Update Investor Profile
+- Delete Investor Profile
 
-### Meeting Management
+### 📅 Meeting Management
 - Schedule Meetings
 - View Meetings
 - Update Meeting Status
 - Delete Meetings
 
-### Document Management
+### 📁 Document Management
 - Upload Documents
 - View Documents
 - Delete Documents
 
-### Messaging
+### 💬 Messaging
 - Send Messages
-- View Conversation History
+- View Conversations
 
-### Notifications
+### 🔔 Notifications
 - Create Notifications
 - View Notifications
 - Mark Notifications as Read
 
-### Investment Management
+### 💵 Investment Management
 - Create Investment Requests
 - View Investments
 - Update Investment Status
 
-### Dashboard
-- Dashboard Statistics
+### 📊 Dashboard
 - Total Users
 - Total Startups
 - Total Investors
@@ -68,29 +73,33 @@ A RESTful backend API built using **Node.js**, **Express.js**, and **MongoDB Atl
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-### Backend
+## Backend
 - Node.js
 - Express.js
 
-### Database
+## Database
 - MongoDB Atlas
-- Mongoose
+- Mongoose ODM
 
-### Authentication
+## Authentication
 - JSON Web Token (JWT)
 - bcryptjs
 
-### Development Tools
-- Nodemon
+## Deployment
+- Railway
+
+## API Testing
 - Thunder Client
-- VS Code
-- Git & GitHub
+
+## Version Control
+- Git
+- GitHub
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
 Nexus-Backend/
@@ -105,47 +114,52 @@ Nexus-Backend/
 ├── app.js
 ├── server.js
 ├── package.json
+├── package-lock.json
 ├── .env
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/AreebaAslam153/Nexus-Backend.git
 ```
 
-### Navigate to Project
+## Navigate into Project
 
 ```bash
 cd Nexus-Backend
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Create .env File
+## Create Environment Variables
+
+Create a `.env` file in the project root.
 
 ```env
 PORT=5000
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+
+MONGODB_URI=YOUR_MONGODB_CONNECTION_STRING
+
 JWT_SECRET=YOUR_SECRET_KEY
 ```
 
-### Run Project
+## Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Server will start at:
+The server will start on:
 
 ```
 http://localhost:5000
@@ -153,91 +167,119 @@ http://localhost:5000
 
 ---
 
-## 📌 API Endpoints
+# 🚀 Deployment
 
-### Authentication
+### Backend (Railway)
+
+```
+https://nexus-backend-production-0d80.up.railway.app
+```
+
+---
+
+# 📌 API Endpoints
+
+## Authentication
 
 | Method | Endpoint |
 |--------|----------|
 | POST | /api/auth/register |
 | POST | /api/auth/login |
 
-### Users
+---
+
+## Users
 
 | Method | Endpoint |
 |--------|----------|
 | GET | /api/users/profile |
 | PUT | /api/users/profile |
 
-### Startups
+---
+
+## Startups
 
 | Method | Endpoint |
 |--------|----------|
-| POST | /api/startups |
 | GET | /api/startups |
 | GET | /api/startups/:id |
+| POST | /api/startups |
 | PUT | /api/startups/:id |
 | DELETE | /api/startups/:id |
 
-### Investors
+---
+
+## Investors
 
 | Method | Endpoint |
 |--------|----------|
-| POST | /api/investors |
 | GET | /api/investors |
+| POST | /api/investors |
 | PUT | /api/investors/:id |
 | DELETE | /api/investors/:id |
 
-### Meetings
+---
+
+## Meetings
 
 | Method | Endpoint |
 |--------|----------|
-| POST | /api/meetings |
 | GET | /api/meetings |
+| POST | /api/meetings |
 | PUT | /api/meetings/:id |
 | DELETE | /api/meetings/:id |
 
-### Documents
+---
+
+## Documents
 
 | Method | Endpoint |
 |--------|----------|
-| POST | /api/documents |
 | GET | /api/documents |
+| POST | /api/documents |
 | DELETE | /api/documents/:id |
-
-### Messages
-
-| Method | Endpoint |
-|--------|----------|
-| POST | /api/messages |
-| GET | /api/messages |
-
-### Notifications
-
-| Method | Endpoint |
-|--------|----------|
-| POST | /api/notifications |
-| GET | /api/notifications |
-
-### Investments
-
-| Method | Endpoint |
-|--------|----------|
-| POST | /api/investments |
-| GET | /api/investments |
-| PUT | /api/investments/:id |
-
-### Dashboard
-
-| Method | Endpoint |
-|--------|----------|
-| GET | /api/dashboard |
 
 ---
 
-## 🔐 Authentication
+## Messages
 
-Protected routes require a JWT token.
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/messages |
+| POST | /api/messages |
+
+---
+
+## Notifications
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/notifications |
+| POST | /api/notifications |
+
+---
+
+## Investments
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/investments |
+| POST | /api/investments |
+| PUT | /api/investments/:id |
+
+---
+
+## Dashboard
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/dashboard/stats |
+
+---
+
+# 🔐 Authentication
+
+Protected routes require a valid JWT token.
 
 Example:
 
@@ -247,18 +289,33 @@ Authorization: Bearer YOUR_JWT_TOKEN
 
 ---
 
-## 👩‍💻 Developer
+# 🧪 API Testing
+
+All APIs were tested successfully using **Thunder Client** in Visual Studio Code.
+
+The following operations were verified:
+
+- User Registration
+- User Login
+- JWT Authentication
+- CRUD Operations
+- Protected Routes
+- Role-Based Authorization
+- Dashboard Statistics
+
+---
+
+# 👨‍💻 Developer
 
 **Areeba Aslam**
 
 BS Information Technology
 
-University of Education, Lahore (Multan Campus)
-
-GitHub: *https://github.com/AreebaAslam153*
+GitHub:
+https://github.com/AreebaAslam153
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project was developed for learning and internship purposes.
+This project was developed for educational and internship purposes.
